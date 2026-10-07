@@ -1,0 +1,391 @@
+{
+  "info": {
+    "_postman_id": "8b0cdf92-bff4-47f2-8a65-c38642647fdf",
+    "name": "Flask user app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50694686"
+  },
+  "item": [
+    {
+      "name": "Add User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Hayam Itani\",\r\n  \"email\": \"hoi01@mail.aub.edu\",\r\n  \"phone\": \"81817946\",\r\n  \"address\": \"Beirut\",\r\n  \"country\": \"Lebanon\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users/add",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "add"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Add User",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Hayam Itani\",\r\n  \"email\": \"hoi01@mail.aub.edu\",\r\n  \"phone\": \"81817946\",\r\n  \"address\": \"Beirut\",\r\n  \"country\": \"Lebanon\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users/add",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "add"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.9 Python/3.11.9"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 07 Oct 2026 12:24:05 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "122"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"address\": \"Beirut\",\n    \"country\": \"Lebanon\",\n    \"email\": \"hoi01@mail.aub.edu\",\n    \"name\": \"Hayam Itani\",\n    \"phone\": \"81817946\",\n    \"user_id\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get all users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/users",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get all users",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/users",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.9 Python/3.11.9"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 07 Oct 2026 12:24:11 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "124"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"address\": \"Beirut\",\n        \"country\": \"Lebanon\",\n        \"email\": \"hoi01@mail.aub.edu\",\n        \"name\": \"Hayam Itani\",\n        \"phone\": \"81817946\",\n        \"user_id\": 1\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "get by user id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/users/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get by user id",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/users/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.9 Python/3.11.9"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 07 Oct 2026 12:24:16 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "122"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"address\": \"Beirut\",\n    \"country\": \"Lebanon\",\n    \"email\": \"hoi01@mail.aub.edu\",\n    \"name\": \"Hayam Itani\",\n    \"phone\": \"81817946\",\n    \"user_id\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "update user",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"user_id\": 1,\r\n  \"name\": \"Hayam Itani\",\r\n  \"email\": \"hoi01@mail.aub.edu\",\r\n  \"phone\": \"81817946\",\r\n  \"address\": \"BEIRUT NEW ADDRESS\",\r\n  \"country\": \"Lebanon\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users/update",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "update"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "update user",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"user_id\": 1,\r\n  \"name\": \"Hayam Itani\",\r\n  \"email\": \"hoi01@mail.aub.edu\",\r\n  \"phone\": \"81817946\",\r\n  \"address\": \"BEIRUT NEW ADDRESS\",\r\n  \"country\": \"Lebanon\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users/update",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "update"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.9 Python/3.11.9"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 07 Oct 2026 12:24:20 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "134"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"address\": \"BEIRUT NEW ADDRESS\",\n    \"country\": \"Lebanon\",\n    \"email\": \"hoi01@mail.aub.edu\",\n    \"name\": \"Hayam Itani\",\n    \"phone\": \"81817946\",\n    \"user_id\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "delete user",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/users/delete/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "delete",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "delete user",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/users/delete/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "delete",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.9 Python/3.11.9"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 07 Oct 2026 12:28:43 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "39"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"User deleted successfully\"\n}"
+        }
+      ]
+    }
+  ]
+}
